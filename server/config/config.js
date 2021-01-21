@@ -18,7 +18,7 @@ let urlDB;
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/javiDB';
 } else {
-    urlDB = 'mongodb+srv://strider:javitomejafer82@cluster0.trvgu.mongodb.net/javiDB';
+    urlDB = process.env.MONGO_URL;
 }
 
 process.env.URLDB = urlDB;
